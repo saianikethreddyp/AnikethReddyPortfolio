@@ -33,16 +33,17 @@ const Navbar = () => {
     };
 
     const navLinks = [
-        { name: 'Work', href: '#projects' },
-        { name: 'About', href: '#about' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Work', href: '/#projects' },
+        { name: 'About', href: '/#about' },
+        { name: 'Contact', href: '/#contact' },
+        { name: 'Blog', href: '/blog' },
     ];
 
     return (
         <>
             <nav className="fixed top-0 left-0 right-0 z-50 py-8 px-4 sm:px-6 lg:px-8 mix-blend-difference text-white">
                 <div className="max-w-[90rem] mx-auto flex justify-between items-center">
-                    <a href="#" className="text-2xl font-heading font-bold tracking-tighter hover:opacity-70 transition-opacity">
+                    <a href="/" className="text-2xl font-heading font-bold tracking-tighter hover:opacity-70 transition-opacity">
                         ANIKETH REDDY
                     </a>
 
@@ -58,7 +59,9 @@ const Navbar = () => {
                             </a>
                         ))}
                         <a
-                            href="#"
+                            href="/resume.pdf" // Assuming resume.pdf is in public or handled elsewhere
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="px-6 py-2 border border-white rounded-full text-sm font-medium tracking-widest uppercase hover:bg-white hover:text-black transition-all"
                         >
                             Resume
