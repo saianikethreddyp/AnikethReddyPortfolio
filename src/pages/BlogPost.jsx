@@ -50,11 +50,7 @@ export default function BlogPost() {
                 <time className="text-muted block">{new Date(post.created_at).toLocaleDateString()}</time>
             </div>
 
-            <div className="prose prose-invert prose-lg max-w-none">
-                {/* Note: If content is raw HTML, use dangerouslySetInnerHTML. If markdown, use a markdown renderer. 
-              Assuming simple text or HTML for now based on user request context not specifying format.
-              For safety, we'll just display body. If it's rich text from Supabase, likely HTML. 
-          */}
+            <div className="prose dark:prose-invert prose-lg md:prose-xl mx-auto prose-headings:font-heading prose-a:text-accent hover:prose-a:text-primary dark:hover:prose-a:text-white prose-img:rounded-xl leading-relaxed text-gray-800 dark:text-gray-200">
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
         </article>
