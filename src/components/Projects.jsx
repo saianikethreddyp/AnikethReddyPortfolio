@@ -39,12 +39,28 @@ const Projects = () => {
                                 <div className="flex justify-between items-start">
                                     <span className="text-xl font-medium text-text/60">0{project.id}</span>
                                     <div className="flex gap-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0">
-                                        <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-text text-primary flex items-center justify-center hover:scale-110 transition-transform">
-                                            <ArrowUpRight size={20} />
-                                        </button>
-                                        <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-text/10 backdrop-blur-md text-text flex items-center justify-center hover:bg-text/20 transition-colors">
-                                            <Github size={20} />
-                                        </button>
+                                        {project.link && project.link !== "#" && (
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-text text-primary flex items-center justify-center hover:scale-110 transition-transform"
+                                                title="View Live"
+                                            >
+                                                <ArrowUpRight size={20} />
+                                            </a>
+                                        )}
+                                        {project.github && project.github !== "#" && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-text/10 backdrop-blur-md text-text flex items-center justify-center hover:bg-text/20 transition-colors"
+                                                title="View on GitHub"
+                                            >
+                                                <Github size={20} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
 
