@@ -30,23 +30,59 @@ export const portfolioData = {
             category: "AI & Full Stack",
             description: "Engineered a full-stack AI interview assistant delivering 100+ domain-specific questions. Integrated Gemini API to auto-generate context-aware explanations.",
             gradient: "from-purple-500/20 to-blue-500/20",
-            year: "2025"
+            year: "2025",
+            github: "https://github.com/saianikethreddyp/AI-Powered-Mock-Interviewer",
+            link: "#"
         },
         {
             id: 2,
-            title: "Internal CRM",
-            category: "Enterprise System",
-            description: "Built a full-stack internal CRM for Intel Club to manage member data and operations. Integrated an AI-powered chatbot to automate FAQs.",
-            gradient: "from-emerald-500/20 to-teal-500/20",
-            year: "2025"
+            title: "WriterStack CMS",
+            category: "Content Management",
+            description: "A modern, full-featured Content Management System built for speed and flexibility. Manage your articles with a rich text editor and deploy with confidence.",
+            gradient: "from-pink-500/20 to-rose-500/20",
+            year: "2025",
+            github: "https://github.com/saianikethreddyp/WriterStack",
+            link: "#"
         },
         {
             id: 3,
+            title: "EnvVault",
+            category: "DevOps Tool",
+            description: "A modern, secure, and efficient way to manage your environment variables across multiple projects and environments. Built with Next.js and Tailwind CSS.",
+            gradient: "from-emerald-500/20 to-teal-500/20",
+            year: "2025",
+            github: "https://github.com/saianikethreddyp/Envvault",
+            link: "#"
+        },
+        {
+            id: 4,
+            title: "Internal CRM",
+            category: "Enterprise System",
+            description: "Built a full-stack internal CRM for Intel Club to manage member data and operations. Integrated an AI-powered chatbot to automate FAQs.",
+            gradient: "from-amber-500/20 to-orange-500/20",
+            year: "2025",
+            github: "#",
+            link: "#"
+        },
+        {
+            id: 5,
             title: "Web Defense",
             category: "Cybersecurity & AI",
             description: "Developed a deep learning-based intrusion detection system achieving 94% accuracy. Designed an end-to-end architecture leveraging Django.",
-            gradient: "from-orange-500/20 to-red-500/20",
-            year: "2024"
+            gradient: "from-red-500/20 to-orange-500/20",
+            year: "2024",
+            github: "#",
+            link: "#"
+        },
+        {
+            id: 6,
+            title: "RAM Monitor",
+            category: "Chrome Extension",
+            description: "A lightweight, developer-friendly Chrome extension that provides real-time insights into website performance and privacy. Displays JS Heap memory usage.",
+            gradient: "from-blue-500/20 to-cyan-500/20",
+            year: "2024",
+            github: "https://github.com/saianikethreddyp/RAM-Usage-Chrome-Extension",
+            link: "#"
         }
     ],
     education: [
