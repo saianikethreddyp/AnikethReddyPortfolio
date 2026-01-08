@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, ArrowRight, Linkedin, Github, Twitter } from 'lucide-react';
+import { portfolioData } from '../data/portfolioData';
 
 const Contact = () => {
+    const { personalInfo } = portfolioData;
+    const { email, phone, location, socials } = personalInfo;
+
     return (
         <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary transition-colors duration-300">
             <div className="max-w-[90rem] mx-auto">
@@ -14,26 +18,26 @@ const Contact = () => {
                         </h2>
 
                         <div className="space-y-8 text-lg">
-                            <a href="mailto:saianikethreddy@gmail.com" className="flex items-center gap-4 text-muted hover:text-text transition-colors group">
+                            <a href={`mailto:${email}`} className="flex items-center gap-4 text-muted hover:text-text transition-colors group">
                                 <Mail className="group-hover:scale-110 transition-transform" />
-                                saianikethreddy@gmail.com
+                                {email}
                             </a>
                             <div className="flex items-center gap-4 text-muted">
                                 <Phone />
-                                9398840252
+                                {phone}
                             </div>
                             <div className="flex items-center gap-4 text-muted">
                                 <MapPin />
-                                Medak, Telangana 502102
+                                {location}
                             </div>
                             <div className="flex items-center gap-6 pt-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-text transition-colors hover:scale-110 transform duration-200">
+                                <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-text transition-colors hover:scale-110 transform duration-200">
                                     <Linkedin size={28} />
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-text transition-colors hover:scale-110 transform duration-200">
+                                <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-text transition-colors hover:scale-110 transform duration-200">
                                     <Github size={28} />
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-text transition-colors hover:scale-110 transform duration-200">
+                                <a href={socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-text transition-colors hover:scale-110 transform duration-200">
                                     <Twitter size={28} />
                                 </a>
                             </div>

@@ -13,15 +13,31 @@ export const portfolioData = {
             "When I'm not coding, you can find me exploring new places, reading books, or experimenting with new design trends."
         ],
         socials: {
-            linkedin: "#",
-            github: "#",
-            twitter: "#"
+            linkedin: "https://www.linkedin.com/in/sai-aniketh-reddy",
+            github: "https://github.com/saianikethreddyp",
+            twitter: "https://x.com/aniketh__rdy"
         }
     },
     skills: [
         "Java", "JavaScript", "React.js", "Node.js", "Express.js", "HTML", "CSS",
         "MongoDB", "MySQL", "Oracle", "RESTful APIs", "Tailwind CSS", "AWS",
         "Postman", "Figma", "Git", "GitHub", "Python", "Django"
+    ],
+    experience: [
+        {
+            title: "Full Stack Developer",
+            company: "Dhanya Smart technology",
+            type: "Full-time",
+            date: "Mar 2024 - Present",
+            location: "Hyderabad, Telangana, India",
+            description: [
+                "Built and maintained 2+ internal systems, including a fleet and rental management platform to manage 100+ assets and operational records, improving workflow efficiency by 30%+",
+                "Developed end-to-end full-stack features across frontend, backend, and database layers for internal business operations",
+                "Designed and launched 3+ SEO-optimized websites, improving organic search visibility and driving 40%+ growth in traffic",
+                "Implemented scalable APIs, database schemas, and responsive UIs aligned with business requirements",
+                "Collaborated closely with founders and stakeholders to deliver production-ready solutions"
+            ]
+        }
     ],
     projects: [
         {
