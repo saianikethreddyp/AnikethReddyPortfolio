@@ -42,7 +42,7 @@ export const portfolioData = {
     projects: [
         {
             id: 1,
-            title: "CareerPrep AI",
+            title: "AI-Powered Mock Interviewer",
             category: "AI & Full Stack",
             description: "Engineered a full-stack AI interview assistant delivering 100+ domain-specific questions. Integrated Gemini API to auto-generate context-aware explanations.",
             gradient: "from-purple-500/20 to-blue-500/20",
@@ -123,9 +123,14 @@ export const portfolioData = {
     ],
     certifications: [
         {
-            name: "Google Cloud Career Launchpad",
-            issuer: "Google Cloud Skills Boost",
-            date: "Aug 2024"
+            name: "Salesforce Certified Agentforce Specialist",
+            issuer: "Salesforce",
+            date: "Dec 2025"
+        },
+        {
+            name: "Full-Stack Development",
+            issuer: "Udemy",
+            date: "Oct 2025"
         },
         {
             name: "Oracle Cloud Foundations",
@@ -133,9 +138,9 @@ export const portfolioData = {
             date: "Aug 2025"
         },
         {
-            name: "Full-Stack Development",
-            issuer: "Udemy",
-            date: "Oct 2025"
+            name: "Google Cloud Career Launchpad",
+            issuer: "Google Cloud Skills Boost",
+            date: "Aug 2024"
         }
     ]
 };
