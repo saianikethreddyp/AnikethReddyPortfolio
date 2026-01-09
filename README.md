@@ -1,9 +1,8 @@
 # Sai Aniketh Reddy
 
-**Software Developer & Creative Technologist**  
+**Software Engineer | Building Scalable Digital Experiences**  
 📍 Medak, Telangana, India  
 📧 [saianikethreddy@gmail.com](mailto:saianikethreddy@gmail.com)  
-
 
 ---
 
@@ -43,11 +42,33 @@ I am constantly learning new technologies and keeping up-to-date with the latest
 
 ---
 
+## 💼 Experience
+
+### Full Stack Developer
+**Dhanya Smart Technology** | Mar 2024 - Present  
+*Hyderabad, Telangana, India*
+
+- Built and maintained 2+ internal systems, including a fleet and rental management platform to manage 100+ assets and operational records, improving workflow efficiency by 30%+.
+- Developed end-to-end full-stack features across frontend, backend, and database layers for internal business operations.
+- Designed and launched 3+ SEO-optimized websites, improving organic search visibility and driving 40%+ growth in traffic.
+- Implemented scalable APIs, database schemas, and responsive UIs aligned with business requirements.
+- Collaborated closely with founders and stakeholders to deliver production-ready solutions.
+
+---
+
 ## 🚀 Projects
 
-### [CareerPrep AI](#)
+### [AI-Powered Mock Interviewer](https://github.com/saianikethreddyp/AI-Powered-Mock-Interviewer)
 **Category:** AI & Full Stack  
 Engineered a full-stack AI interview assistant delivering 100+ domain-specific questions. Integrated Gemini API to auto-generate context-aware explanations.
+
+### [WriterStack CMS](https://github.com/saianikethreddyp/WriterStack)
+**Category:** Content Management  
+A modern, full-featured Content Management System built for speed and flexibility. Manage your articles with a rich text editor and deploy with confidence.
+
+### [EnvVault](https://github.com/saianikethreddyp/Envvault)
+**Category:** DevOps Tool  
+A modern, secure, and efficient way to manage your environment variables across multiple projects and environments. Built with Next.js and Tailwind CSS.
 
 ### [Internal CRM](#)
 **Category:** Enterprise System  
@@ -56,6 +77,10 @@ Built a full-stack internal CRM for Intel Club to manage member data and operati
 ### [Web Defense](#)
 **Category:** Cybersecurity & AI  
 Developed a deep learning-based intrusion detection system achieving 94% accuracy. Designed an end-to-end architecture leveraging Django.
+
+### [RAM Monitor](https://github.com/saianikethreddyp/RAM-Usage-Chrome-Extension)
+**Category:** Chrome Extension  
+A lightweight, developer-friendly Chrome extension that provides real-time insights into website performance and privacy. Displays JS Heap memory usage.
 
 ---
 
@@ -77,14 +102,15 @@ CGPA: 10
 
 ## 📜 Certifications
 
-- **Google Cloud Career Launchpad** - Google Cloud Skills Boost (Aug 2024)
-- **Oracle Cloud Foundations** - Oracle (Aug 2025)
+- **Salesforce Certified Agentforce Specialist** - Salesforce (Dec 2025)
 - **Full-Stack Development** - Udemy (Oct 2025)
+- **Oracle Cloud Foundations** - Oracle (Aug 2025)
+- **Google Cloud Career Launchpad** - Google Cloud Skills Boost (Aug 2024)
 
 ---
 
 ## 📫 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](#)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](#)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](#)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sai-aniketh-reddy)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/saianikethreddyp)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/aniketh__rdy)
