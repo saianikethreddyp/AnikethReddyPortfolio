@@ -8,56 +8,90 @@ const ChatBot = () => {
     const [messages, setMessages] = useState([
         {
             id: 1,
-            text: "Hi there! I'm Aniketh's virtual assistant. Ask me about his skills, projects, experience, or how to contact him!",
+            text: "Hi there! I'm Aniketh's AI assistant. I can tell you about his work experience, projects, skills, and certifications. What would you like to know?",
             sender: 'bot'
         }
     ]);
-    const [input, setInput] = useState('');
-    const messagesEndRef = useRef(null);
 
-    const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // ... existing refs and scroll logic ...
+
+    const getAllContext = () => {
+        const { personalInfo, skills, projects, education, certifications, experience } = portfolioData;
+
+        let context = [];
+
+        // Personal Info
+        context.push({ keywords: ['about', 'bio', 'who', 'background', 'intro'], content: personalInfo.bio.join(' ') });
+        context.push({ keywords: ['email', 'contact', 'reach', 'phone', 'location', 'address'], content: `You can reach Aniketh at ${personalInfo.email}, call him at ${personalInfo.phone}, or find him in ${personalInfo.location}.` });
+        context.push({ keywords: ['social', 'linkedin', 'github', 'twitter', 'x'], content: `Connect with him on LinkedIn: ${personalInfo.socials.linkedin}, GitHub: ${personalInfo.socials.github}, or X: ${personalInfo.socials.twitter}.` });
+
+        // Experience
+        experience.forEach(job => {
+            context.push({
+                keywords: ['experience', 'work', 'job', 'company', 'dhanya', 'career', job.company.toLowerCase(), job.title.toLowerCase()],
+                content: `Aniketh is currently working as a ${job.title} at ${job.company} (${job.date}). ${job.description.join(' ')}`
+            });
+        });
+
+        // Projects
+        projects.forEach(project => {
+            context.push({
+                keywords: ['project', 'built', 'create', 'develop', project.title.toLowerCase()],
+                content: `Project: ${project.title} (${project.category}, ${project.year}). ${project.description}. View it here: ${project.github}`
+            });
+        });
+
+        // Skills
+        context.push({ keywords: ['skill', 'stack', 'tech', 'language', 'tool', 'react', 'node', 'java'], content: `Aniketh's technical skills include: ${skills.join(', ')}.` });
+
+        // Certifications
+        const certNames = certifications.map(c => c.name).join(', ');
+        context.push({ keywords: ['certification', 'certificate', 'licensed', 'course'], content: `Aniketh holds the following certifications: ${certNames}.` });
+
+        // Education
+        const edu = education[0];
+        context.push({ keywords: ['education', 'degree', 'college', 'school', 'university', 'btech'], content: `Aniketh is pursuing his ${edu.degree} at ${edu.school} with a score of ${edu.score}.` });
+
+        return context;
     };
 
-    useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
+    const findBestMatch = (query) => {
+        const terms = query.toLowerCase().split(' ').filter(word => word.length > 2); // Ignore short words
+        const context = getAllContext();
+
+        let bestMatch = null;
+        let maxScore = 0;
+
+        context.forEach(item => {
+            let score = 0;
+            terms.forEach(term => {
+                if (item.keywords.some(k => k.includes(term) || term.includes(k))) score += 3; // Keyword match
+                if (item.content.toLowerCase().includes(term)) score += 1; // Content match
+            });
+
+            if (score > maxScore) {
+                maxScore = score;
+                bestMatch = item;
+            }
+        });
+
+        return maxScore > 0 ? bestMatch.content : null;
+    };
 
     const generateResponse = (query) => {
         const lowerQuery = query.toLowerCase();
 
-        if (lowerQuery.includes('skill') || lowerQuery.includes('stack') || lowerQuery.includes('technolog')) {
-            return `Aniketh is proficient in: ${portfolioData.skills.join(', ')}.`;
+        // Greeting check
+        if (['hi', 'hello', 'hey', 'greetings'].some(w => lowerQuery.startsWith(w))) {
+            return "Hello! How can I help you today?";
         }
 
-        if (lowerQuery.includes('project') || lowerQuery.includes('work') || lowerQuery.includes('built')) {
-            const projectNames = portfolioData.projects.map(p => p.title).join(', ');
-            return `Here are some of his key projects: ${projectNames}. You can ask for details about a specific one!`;
+        const match = findBestMatch(query);
+        if (match) {
+            return match;
         }
 
-        if (lowerQuery.includes('experience') || lowerQuery.includes('job') || lowerQuery.includes('work history')) {
-            const latest = portfolioData.education[0]; // Using education as proxy for now if no job experience listed, or just general info
-            // Actually, let's look at the data structure. It has education and certifications.
-            // The user might have meant "experience" as in work experience, but the current data only has education/certs.
-            // Let's list education for now as "background".
-            return `Aniketh is currently pursuing his ${latest.degree} at ${latest.school}. He has also completed certifications in ${portfolioData.certifications.map(c => c.name).join(', ')}.`;
-        }
-
-        if (lowerQuery.includes('contact') || lowerQuery.includes('email') || lowerQuery.includes('reach')) {
-            return `You can reach him at ${portfolioData.personalInfo.email} or call ${portfolioData.personalInfo.phone}.`;
-        }
-
-        if (lowerQuery.includes('about') || lowerQuery.includes('who is')) {
-            return portfolioData.personalInfo.bio[0] + " " + portfolioData.personalInfo.bio[2];
-        }
-
-        // Check for specific project details
-        const foundProject = portfolioData.projects.find(p => lowerQuery.includes(p.title.toLowerCase()));
-        if (foundProject) {
-            return `${foundProject.title}: ${foundProject.description} (Category: ${foundProject.category})`;
-        }
-
-        return "I'm not sure about that. Try asking about skills, projects, education, or contact info!";
+        return "I'm not sure about that. I can tell you about Aniketh's experience, projects, skills, or education. Try asking something specific!";
     };
 
     const handleSend = (e) => {
@@ -134,8 +168,8 @@ const ChatBot = () => {
                                 >
                                     <div
                                         className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === 'user'
-                                                ? 'bg-text text-primary rounded-tr-none'
-                                                : 'bg-text/5 text-text border border-text/10 rounded-tl-none'
+                                            ? 'bg-text text-primary rounded-tr-none'
+                                            : 'bg-text/5 text-text border border-text/10 rounded-tl-none'
                                             }`}
                                     >
                                         {msg.text}

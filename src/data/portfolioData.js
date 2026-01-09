@@ -1,7 +1,7 @@
 export const portfolioData = {
     personalInfo: {
         name: "Sai Aniketh Reddy",
-        title: "Software Developer & Creative Technologist",
+        title: "Software Engineer | Building Scalable Digital Experiences",
         email: "saianikethreddy@gmail.com",
         phone: "9398840252",
         location: "Medak, Telangana 502102",

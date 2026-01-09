@@ -23,10 +23,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl md:text-2xl text-muted max-w-md font-light"
+            className="text-xl md:text-2xl text-muted max-w-2xl font-light"
           >
-            Software Developer & <br />
-            Creative Technologist based in India.
+            Software Engineer | Turning Ideas into Reality <br />
+            Building Scalable Digital Experiences.
           </motion.p>
 
           <motion.div
