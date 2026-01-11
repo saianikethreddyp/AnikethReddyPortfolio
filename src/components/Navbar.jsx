@@ -59,7 +59,7 @@ const Navbar = () => {
                             </a>
                         ))}
                         <a
-                            href="/resume.pdf" // Assuming resume.pdf is in public or handled elsewhere
+                            href="https://drive.google.com/file/d/1vpZ2X5aQyjO0ilv6Qnbgj7Ksa6Ri-91f/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-6 py-2 border border-white rounded-full text-sm font-medium tracking-widest uppercase hover:bg-white hover:text-black transition-all"
@@ -121,7 +121,7 @@ const Navbar = () => {
                                 </a>
                             ))}
                             <a
-                                href="#"
+                                href="https://drive.google.com/file/d/1vpZ2X5aQyjO0ilv6Qnbgj7Ksa6Ri-91f/view?usp=sharing"
                                 className="text-4xl font-heading font-bold text-black dark:text-white hover:opacity-50 transition-opacity"
                                 onClick={() => setIsOpen(false)}
                             >
