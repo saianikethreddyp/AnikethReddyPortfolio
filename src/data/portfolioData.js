@@ -99,6 +99,16 @@ export const portfolioData = {
             year: "2024",
             github: "https://github.com/saianikethreddyp/RAM-Usage-Chrome-Extension",
             link: "#"
+        },
+        {
+            id: 7,
+            title: "GrowthTracker",
+            category: "Productivity & Tracking",
+            description: "A comprehensive dashboard for tracking developer growth, featuring DSA learning sheets, real-time statistics, a Pomodoro timer, and academic performance tracking.",
+            gradient: "from-green-500/20 to-emerald-500/20",
+            year: "2025",
+            github: "https://github.com/saianikethreddyp/Growthtracker",
+            link: "#"
         }
     ],
     education: [

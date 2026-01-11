@@ -82,7 +82,12 @@ Developed a deep learning-based intrusion detection system achieving 94% accurac
 **Category:** Chrome Extension  
 A lightweight, developer-friendly Chrome extension that provides real-time insights into website performance and privacy. Displays JS Heap memory usage.
 
+### [GrowthTracker](https://github.com/saianikethreddyp/Growthtracker)
+**Category:** Productivity & Tracking  
+A comprehensive dashboard for tracking developer growth, featuring DSA learning sheets, real-time statistics, a Pomodoro timer, and academic performance tracking.
+
 ---
+
 
 ## 🎓 Education
 
